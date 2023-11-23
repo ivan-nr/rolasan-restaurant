@@ -12,6 +12,7 @@
   outline: none;
   border: none;
   text-decoration: none;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -29,16 +30,26 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .navbar .navbar-nav a {
   color: #fff;
   display: inline-block;
   font-size: 1rem;
-  text-transform: capitalize;
+  text-transform: uppercase;
   margin: 0 1rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .navbar .navbar-nav a:hover {
@@ -56,12 +67,6 @@ body {
 
 .navbar .navbar-nav a:hover::after {
   transform: scaleX(0.5);
-}
-
-.extra {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
 }
 
 #hamburger-menu {
@@ -90,8 +95,10 @@ body {
   gap: 4rem;
 }
 
-.hero h4{
-  font-weight: 300;
+.hero h4 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-style: italic;
 }
 
 .hero h1 {
@@ -100,7 +107,12 @@ body {
   font-weight: 700;
 }
 
-.hero p{
+.hero h1 span {
+  color: var(--secondary);
+  font-style: italic;
+}
+
+.hero p {
   text-align: center;
   font-weight: 300;
   font-size: 0.8rem;
@@ -112,6 +124,38 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
+}
+
+/* about section */
+.about {
+  min-height: 100vh;
+  justify-content: center;
+  padding: 1.5rem 7%;
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  padding: 4rem;
+  color: var(--secondary);
+}
+
+.about-content {
+  display: flex;
+  gap: 3rem;
+}
+
+.about-article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.about-article h4 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-style: italic;
 }
 
 /* Media Queries */
@@ -161,6 +205,12 @@ body {
   .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.2);
   }
+
+  .about-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 /* Mobile */
@@ -169,15 +219,28 @@ body {
     font-size: 55%;
   }
 
-  .navbar .navbar-nav{
+  .navbar {
+    padding: 2rem 7%;
+  }
+
+  .navbar .navbar-nav {
     width: 100%;
+  }
+
+  .navbar .navbar-nav a {
+    text-align: center;
+    margin: 4rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: center;
   }
 
   .hero {
     gap: 3rem;
   }
 
-  .hero h1{
-    font-size: 3.2rem;
+  .hero h1 {
+    font-size: 3.5rem;
   }
 }
