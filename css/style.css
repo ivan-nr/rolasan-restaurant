@@ -242,11 +242,11 @@ h2 {
 }
 
 input[type="email"] {
-  padding: 1rem;
-  width: 30rem;
+  padding: 0.8rem;
+  width: 24rem;
   margin-top: 1.5rem;
   border-radius: 10px;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .input {
@@ -257,13 +257,13 @@ input[type="email"] {
   position: absolute;
   right: 0;
   bottom: 0;
-  padding: 1rem;
+  padding: 0.8rem;
   border-radius: 0 10px 10px 0;
   cursor: pointer;
   background-color: var(--secondary);
   color: #fff;
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 /* footer section */
@@ -405,5 +405,16 @@ input[type="email"] {
 
   .hero h1 {
     font-size: 3.5rem;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+
+  .contact,
+  .address,
+  .social {
+    text-align: center;
+    margin: 1.4rem;
   }
 }
